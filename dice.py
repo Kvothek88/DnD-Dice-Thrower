@@ -80,7 +80,6 @@ def text_objects(text, font):
     return textSurface, textSurface.get_rect()
 
 def message_display(text,text2,text3,size):
-    global click
     largeText = pygame.font.SysFont('adobegothicstdkalin',100)
     TextSurf, TextRect = text_objects(text, largeText)
     TextSurf2, TextRect2 = text_objects(text2, tinyfont)
