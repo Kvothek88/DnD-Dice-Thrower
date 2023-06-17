@@ -131,13 +131,15 @@ def count_down():
 def game_loop():
     while True:
 
+        mouse = pygame.mouse.get_pos()
+
         for ev in pygame.event.get():
 
             if ev.type == pygame.QUIT:
                 pygame.quit()
               
             if ev.type == pygame.MOUSEBUTTONDOWN:
-              
+                
                 if width-699 <= mouse[0] <= width-611 and height-650 <= mouse[1] <= height-562:
                     if count == 1:
                         x1hit.play()
@@ -150,8 +152,8 @@ def game_loop():
                     else:
                         x5hit.play()
                     x,y = d_random(count,4)
-                    print(x,y)        
-                    message_display(str(x),str(y),str(count)+"d4",y)                    
+                    print(x,y)     
+                    message_display(str(x),str(y),str(count)+"d4",y)               
                 if width-581 <= mouse[0] <= width-493 and height-650 <= mouse[1] <= height-562:
                     if count == 1:
                         x1hit.play()
@@ -229,8 +231,7 @@ def game_loop():
 
         screen.fill((127,127,127))
         
-        mouse = pygame.mouse.get_pos()
-        
+    
         # if mouse is hovered on a button it
         # changes to lighter shade 
         #d4
